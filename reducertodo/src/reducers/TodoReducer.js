@@ -1,8 +1,8 @@
 export const initialState = {
-    item: 'Learn about reducers',
+    items: [{item: '',
     completed: false,
     id: Date.now()
-      
+  }]
 };
 
 export const reducer = (state, action) => {
@@ -10,7 +10,7 @@ export const reducer = (state, action) => {
         case 'MAKE_TODO':
             return [
                 ...state,
-                action.payload
+                action.payloads
             ];
         default:
             return state;
